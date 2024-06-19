@@ -1,0 +1,19 @@
+@import '../../styles.scss';
+
+table {
+    width: 100%;
+  }
+
+.buttons{
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+}
+
+.detail-buttons{
+  background: none;
+  color: #008080;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

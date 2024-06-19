@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="content" *ngIf = "showForm">
+        <div class="header">
+            <p class="big-text">ADD USER</p>
+            <button class="button medium-text" (click)="hideForm()" *ngIf = "!showTable">View Users</button>
+        </div>
+        <app-form (hideForm)="hideForm()" [editUserDetails]="editUserDetails"></app-form>
+    </div>
+    <div class="content" *ngIf = "showTable">
+        <div class="header">
+            <p class="big-text">USER DETAILS</p>
+            <button class="button medium-text" (click)="hideForm()" *ngIf = "showTable">Add User</button>
+        </div>
+        <app-table (editUserDetails)="editDetails($event)"></app-table>
+    </div>
+</div>

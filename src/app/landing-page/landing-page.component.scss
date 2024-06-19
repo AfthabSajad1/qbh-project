@@ -1,0 +1,21 @@
+@import '../../styles.scss'; 
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    background-color: #d1d1e0;
+    width: 1000px;
+    position: relative;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}

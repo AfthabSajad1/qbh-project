@@ -28,7 +28,7 @@ export class FormComponent implements OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['editUserDetails']){
       this.fillForm(this.editUserDetails);
-    }  
+    }
   }
 
   onSubmit() {
@@ -38,6 +38,7 @@ export class FormComponent implements OnChanges{
       } else {
         this.editUser();
       }
+      this.clearForm();
     }
   }
 
@@ -57,5 +58,12 @@ export class FormComponent implements OnChanges{
       console.log(result);
       this.hideForm.emit();
     })
+  }
+
+  clearForm(){
+      this.editUserDetails.address = '';
+      this.editUserDetails.name = '';
+      this.editUserDetails.phone = '';
+      this.editUserDetails.email = '';
   }
 }
